@@ -16,7 +16,7 @@ namespace SaveBackuper
 
         public override void ModSetup()
         {
-            SetupFunction(Setup.OnSave, Mod_OnLoad);
+            SetupFunction(Setup.OnLoad, Mod_OnLoad);
             SetupFunction(Setup.ModSettings, Mod_Settings);
         }
         readonly string MSCSaves = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData).Replace("Roaming", "LocalLow") + "/Amistech";
@@ -35,7 +35,7 @@ namespace SaveBackuper
                     string FileName = Path.GetFileName(file);
                     File.Copy(file, MSCSaves + "/Backup/" + Date + "/" + FileName);
                 }
-                ModConsole.Log("[SaveBackuper] Backup done successfully");
+                ModConsole.Log("<color=#ffffff>[SaveBackuper] Backup done successfully</color>");
             }
             catch (Exception ex)
             {
@@ -97,7 +97,7 @@ namespace SaveBackuper
                 Directory.CreateDirectory(MSCSaves + "/Backup");
             }
 
-            ModConsole.Log("[SaveBackuper] Backing up SaveFile...");
+            ModConsole.Log("<color=#ffffff>[SaveBackuper] Backing up SaveFile...</color>");
 
             DoBackup();
         }
