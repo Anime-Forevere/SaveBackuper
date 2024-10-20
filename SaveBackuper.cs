@@ -11,7 +11,7 @@ namespace SaveBackuper
         public override string ID => "SaveBackuper"; // Your (unique) mod ID 
         public override string Name => "SaveBackuper"; // Your mod name
         public override string Author => "Anime-Forevere"; // Name of the Author (your name)
-        public override string Version => "1.0"; // Version
+        public override string Version => "1.1"; // Version
         public override string Description => "Automatically backs up your saves on each save load"; // Short description of your mod
 
         public override void ModSetup()
